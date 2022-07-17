@@ -6,6 +6,9 @@ import icon from '../images/cryptocurrency.png';
 import MenuItem from 'antd/lib/menu/MenuItem';
 
 
+let { Item } = Menu;
+
+
 const Navbar = () => {
     const [activeMenu, setActiveMenu] = useState(true);
     const [screenSize, setScreenSize] = useState(null);
@@ -42,15 +45,15 @@ const Navbar = () => {
             </Button>
                     {activeMenu && (
                         <Menu theme='dark'>
-                            <MenuItem icon={<HomeOutlined />} key='item-1'>
+                            <Item icon={<HomeOutlined />} key='item-1'>
                                 <Link to="/">Home</Link>
-                            </MenuItem>
-                            <MenuItem icon={<FundOutlined />} key='item-2'>
+                            </Item>
+                            <Item icon={<FundOutlined />} key='item-2'>
                                 <Link to="/cryptocurrencies">CryptoCurrencies</Link>
-                            </MenuItem>
-                            <MenuItem icon={<FundOutlined />} key='item-4'>
+                            </Item>
+                            <Item icon={<FundOutlined />} key='item-4'>
                                 <Link to="/news">News</Link>
-                            </MenuItem>
+                            </Item>
                         </Menu>
                     )}
 
